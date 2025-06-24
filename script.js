@@ -1,5 +1,8 @@
+createGrid();
+
 function createGrid(num=16) {
     const container = document.querySelector("#container");
+    container.replaceChildren();
     for (let i = 0; i < num; i++) {
         for (let j = 0; j < num; j++) {
             const box = document.createElement("div");
@@ -16,4 +19,12 @@ function createGrid(num=16) {
     });
 }
 
-createGrid(100);
+const resizeButton = document.querySelector("#resize");
+resizeButton.addEventListener("click", () => {
+    const resize = Number(prompt("Change canvas size (1-100):"));
+    if (resize >= 1 && resize <= 100) {
+        createGrid(resize);
+    } else {
+        alert("Invalid Size.")
+    }
+});
