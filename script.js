@@ -10,7 +10,9 @@ function createGrid(num=16) {
         }
     }
     container.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "black";
+        if (event.target.classList.contains("pixel")) {
+            event.target.style.backgroundColor = "black";
+        }
     });
 }
 

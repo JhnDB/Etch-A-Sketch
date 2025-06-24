@@ -1,6 +1,15 @@
 * {
-    --size: 35vw;
-    box-sizing: border-box;
+    --size: 60vh;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 95vh;
+}
+
+h1 {
+    font-size: 5rem;
 }
 
 #container {
@@ -8,10 +17,11 @@
     height: var(--size);
     display: flex;
     flex-wrap: wrap;
+    border: black solid 5px;
 }
 
 .pixel {
-    border: black solid 1px;
+    /* border: black solid 1px; */
     width: calc(var(--size) / 16);
     height: calc(var(--size) / 16);
 }
