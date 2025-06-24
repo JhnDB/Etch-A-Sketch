@@ -1,0 +1,17 @@
+* {
+    --size: 35vw;
+    box-sizing: border-box;
+}
+
+#container {
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pixel {
+    border: black solid 1px;
+    width: calc(var(--size) / 16);
+    height: calc(var(--size) / 16);
+}
